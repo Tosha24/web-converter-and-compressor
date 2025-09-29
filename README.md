@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bulk Image Converter
+
+A free, fast, and secure bulk image converter that converts PNG, JPG, and WEBP images to optimized WEBP format. All processing happens locally on your device - no data leaves your computer.
+
+## Features
+
+- 🚀 **Fast Processing** - Convert multiple images simultaneously
+- 💾 **Local Processing** - All conversion happens locally, no cloud storage
+- 📦 **Bulk Download** - Download individual files or all at once in a ZIP
+- 🎛️ **Quality Control** - Adjustable quality settings (10-100%)
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
+- 🎨 **Modern UI** - Clean, intuitive interface with drag-and-drop
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone or download this project
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +45,44 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Upload Images**: Drag and drop images or click to select files
+2. **Adjust Quality**: Use the slider to set compression quality (default: 80%)
+3. **Convert**: Click "Convert & Download ZIP" to process all images
+4. **Download**: Download individual files or the complete ZIP archive
 
-## Learn More
+## Supported Formats
 
-To learn more about Next.js, take a look at the following resources:
+- **Input**: PNG, JPG, WEBP
+- **Output**: WEBP (optimized)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js 14** - React framework with App Router
+- **Tailwind CSS** - Utility-first CSS framework
+- **Sharp** - High-performance image processing
+- **JSZip** - Client-side ZIP file generation
+- **TypeScript** - Type-safe development
 
-## Deploy on Vercel
+## Privacy & Security
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ All processing happens locally
+- ✅ No data is sent to external servers
+- ✅ No cloud storage or third-party services
+- ✅ Completely free and open source
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Development
+
+The project uses:
+
+- `app/page.tsx` - Main application interface
+- `app/api/convert/route.ts` - API endpoint for image conversion
+- `app/layout.tsx` - Root layout with metadata
+- `app/globals.css` - Global styles with Tailwind
+
+## License
+
+This project is open source and available under the MIT License.
